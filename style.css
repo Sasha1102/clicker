@@ -1,57 +1,87 @@
 QWidget {
-    background-color: #88a6c5;
-}
-
-/* Загальний стиль для всіх QLabel, який можна перевизначити */
-QLabel {
-    color: white;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1,
+                      stop:0 #e3f2fd, stop:1 #fce4ec);
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    color: #333;
 }
 
-/* Стиль для кількості кліків */
+QLabel {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+    background-color: transparent;
+}
+
 QLabel#scoreLabel {
-    color: #ffd700; /* Золотий колір для кількості кліків */
-    font-size: 32px; /* Більший розмір шрифту */
-    margin-bottom: 5px; /* Менший відступ знизу */
+    color: #6A1B9A;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px #ccc;
 }
 
-/* Стиль для множника */
 QLabel#powerLabel {
-    color: #a8dadc; /* Блакитний колір для множника */
-    font-size: 24px; /* Трохи менший розмір шрифту */
-    font-style: italic; /* Курсивний шрифт */
-    margin-bottom: 20px; /* Більший відступ знизу */
+    color: #D84315;
+    font-size: 28px;
+    margin-bottom: 0px;
 }
 
-QPushButton#upgradeButton {
-    background-color: #2ecc71;
-    color: white;
-    border-radius: 12px;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
+QLabel#autoclickRateLabel {
+    color: #00796B;
+    font-size: 26px;
+    margin-top: 0px;
+}
+
+QPushButton {
     border: none;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    min-height: 40px;
-    min-width: 350px;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
 
-QPushButton#upgradeButton:hover {
-    background-color: #27ae60;
+QPushButton:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
-QPushButton#upgradeButton:pressed {
-    background-color: #219d55;
+QPushButton:pressed {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(0.98);
 }
 
-QPushButton#upgradeButton:disabled {
-    background-color: #7f8c8d;
-    color: white;
-    border: none;
+QPushButton:disabled {
+    background-color: #bdbdbd;
+    color: #eeeeee;
+    box-shadow: none;
+}
+
+QPushButton#upgradeButton {
+    background-color: #66bb6a;
+}
+
+QPushButton#upgradeButton:hover {
+    background-color: #57a05a;
+}
+
+QPushButton#upgradeButton:pressed {
+    background-color: #4b8f4d;
+}
+
+QPushButton#autoclickButton {
+    background-color: #42a5f5;
+}
+
+QPushButton#autoclickButton:hover {
+    background-color: #3498db;
+}
+
+QPushButton#autoclickButton:pressed {
+    background-color: #2c80c4;
 }
 
 QPushButton#planetButton {
@@ -60,7 +90,6 @@ QPushButton#planetButton {
     padding: 0;
     margin: 0;
     outline: none;
-    transition: all 0.1s ease;
 }
 
 QPushButton#planetButton:pressed {
