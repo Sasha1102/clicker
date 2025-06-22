@@ -1,8 +1,5 @@
 QWidget {
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1,
-                      stop:0 #e3f2fd, stop:1 #fce4ec);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: #333;
+    background-color: rgb(206, 206, 206)
 }
 
 QLabel {
@@ -96,4 +93,21 @@ QPushButton#planetButton:pressed {
     padding-left: 5px;
     padding-top: 5px;
     box-shadow: inset 0 3px 5px rgba(0,0,0,0.3);
+}
+
+QPushButton#authButton {
+    background-color: #bdaa00;
+}
+
+QPushButton#authButton:hover {
+    background-color: #848600;
+}
+
+QPushButton#authButton:pressed {
+    background-color: #a3a113;
+}
+
+QMessageBox{
+    background-color: white;
+    color: black;
 }
