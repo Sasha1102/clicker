@@ -145,8 +145,8 @@ class Clicker(QWidget):
         self.autoclick_timer.timeout.connect(self.autoclick)
         self.autoclick_timer.start()
 
-        self._set_game_state_enabled(False)  # Вимкнути ігрові елементи на старті
-        self.update_labels()  # Оновити лейбли з початковими значеннями
+        self._set_game_state_enabled(False)
+        self.update_labels()
 
     def _load_current_user_progress(self):
         if not self.current_username:
@@ -183,7 +183,7 @@ class Clicker(QWidget):
             with open("users.json", "r", encoding='utf-8') as file:
                 all_users = json.load(file)
         except (FileNotFoundError, json.JSONDecodeError):
-            all_users = {}  # Якщо файл не знайдено або він порожній/пошкоджений, починаємо з порожнього словника
+            all_users = {}
 
         if self.current_username not in all_users:
             print(f"Помилка: Не вдалося знайти користувача {self.current_username} для збереження.")
