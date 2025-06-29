@@ -41,7 +41,7 @@ class RegisterDialog(QDialog):
                 with open("users.json", "r", encoding='utf-8') as file:
                     all_users = json.load(file)
             except (FileNotFoundError, json.JSONDecodeError):
-                all_users = {}  # Якщо файл не знайдено або він порожній/пошкоджений, починаємо з порожнього словника
+                all_users = {}
 
             if username in all_users:
                 QMessageBox.warning(self, "Помилка", "Користувач з таким логіном вже існує!")
